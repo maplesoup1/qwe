@@ -1,0 +1,90 @@
+
+========================================================================
+                          Complexity Analysis
+========================================================================
+
+NOTE:
+- Your time complexities should be in big-O notation.
+- For operations that involve only one set, your time complexities should
+  be in terms of n, where n is the number of elements in the set.
+- For operations that involve two sets, your time complexities should be in
+  terms of n and m, where n and m are the number of elements in each of the
+  sets respectively.
+
+
+--------
+SetUnion
+--------
+
+Worst case complexity: O(nlogn)
+
+Explanation: 
+Insert node is O(logn),and 2n node need to be inserted
+
+---------------
+SetIntersection
+---------------
+
+Worst case complexity: O(nlogn)
+
+Explanation: 
+Determine the node in set1 whether is in set2 need O(logn),and n node need to be judged
+
+-------------
+SetDifference
+-------------
+
+Worst case complexity: O(nlogn)
+
+Explanation: 
+Determine the node in set1 whether is  not in set2 need O(logn),and n node need to be judged
+
+---------
+SetEquals
+---------
+
+Worst case complexity: O(nlogn)
+
+Explanation: 
+Each node in two set will be compared, and each iterate in set is O(logn)
+
+---------
+SetSubset
+---------
+
+Worst case complexity: 
+
+Explanation: O(nlogn)
+Each node in set1 will be search in set2,and each search is O(logn)
+
+
+--------
+SetFloor
+--------
+
+Worst case complexity: O(logn)
+
+Explanation: 
+In AVL tree,the max height is logn,so the search is O(logn)
+
+----------
+SetCeiling
+----------
+
+Worst case complexity: O(logn)
+
+Explanation: 
+In AVL tree,the max height is logn,so the search is O(logn)
+
+========================================================================
+               Design Documentation for Cursor Operations
+========================================================================
+
+
+I use a tag to mark whether the node is accessed, and then make a judgment. If the current left node has been visited and the right node has not been visited, go to the right node. If both the left and right nodes have been visited, go to the parent node.
+
+
+
+
+
+
